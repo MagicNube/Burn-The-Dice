@@ -1,0 +1,13 @@
+# Godot-specific ignores
+.godot/
+
+# Map editor local configuration files
+.import/
+
+# Exported binaries
+*.tmp
+export_presets.cfg
+
+# OS specific files
+.DS_Store
+Thumbs.db
