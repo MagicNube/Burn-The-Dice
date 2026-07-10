@@ -11,7 +11,6 @@ func setup_faces(def: DiceDefinition, cont: DiceContent) -> void:
 	queue_redraw() 
 
 func _draw() -> void:
-	print ("PINTANDO")
 	var canvas_size = get_size()
 	draw_rect(Rect2(Vector2.ZERO, canvas_size), Color.WHITE)
 	
@@ -27,9 +26,10 @@ func _draw() -> void:
 			var face_data = content.faces[geo_id]
 			
 			if not face_data.values.is_empty():
-				var pixel_center = geo.uv_center * canvas_size
-				var transform = Transform2D(deg_to_rad(geo.rotation_deg), pixel_center)
+				var fixed_uv = Vector2(geo.uv_center.x, 1.0 - geo.uv_center.y)
+				var pixel_center = fixed_uv * canvas_size
 				
+				var transform = Transform2D(deg_to_rad(-geo.rotation_deg), pixel_center)
 				draw_set_transform_matrix(transform)
 				
 				var text_to_draw = face_data.values[0]
