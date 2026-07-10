@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://5nt0hf6cqtrw"]
+
+[ext_resource type="Script" uid="uid://bta6tefgi4mj1" path="res://scenes/environment/table.gd" id="1_3x8lu"]
+[ext_resource type="PackedScene" uid="uid://cg5g7yrjborud" path="res://dice.tscn" id="2_180xf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vx71s"]
+albedo_color = Color(0.33437502, 0.22008668, 0.07314454, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_sq2hu"]
+size = Vector3(20, 1, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sq2hu"]
+size = Vector3(20, 1, 20)
+
+[node name="Table" type="Node3D" unique_id=1372190954]
+script = ExtResource("1_3x8lu")
+dice_scene = ExtResource("2_180xf")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=780057799]
+transform = Transform3D(1, 0, 0, 0, 0.57357645, 0.81915206, 0, -0.81915206, 0.57357645, 0, 7, 5)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1885947841]
+transform = Transform3D(0.8660254, 0.43301272, -0.24999999, 0, 0.49999997, 0.86602545, 0.5, -0.75, 0.43301266, 0, 50, 0)
+shadow_enabled = true
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=1793906146]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=1937082256]
+material_override = SubResource("StandardMaterial3D_vx71s")
+mesh = SubResource("BoxMesh_sq2hu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=306347298]
+shape = SubResource("BoxShape3D_sq2hu")
