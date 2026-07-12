@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://nyvmsidi2div"]
+
+[ext_resource type="Script" uid="uid://cpdc4oau5qndd" path="res://modules/dice/runtime/dice.gd" id="1_8cbfa"]
+[ext_resource type="Script" uid="uid://va6l455mns1j" path="res://modules/dice/data/definitions/face_geometry.gd" id="2_bcnpj"]
+[ext_resource type="Script" uid="uid://ci18gds2uv7sd" path="res://modules/dice/data/definitions/dice_definition.gd" id="3_3fw3o"]
+[ext_resource type="Script" uid="uid://bnyhpdwia5iq8" path="res://modules/dice/data/content/face_content.gd" id="4_c8ph3"]
+[ext_resource type="Script" uid="uid://m5xhnm0i2xke" path="res://modules/dice/data/content/dice_content.gd" id="5_nbj17"]
+[ext_resource type="Script" uid="uid://cjit44as410nm" path="res://modules/dice/ui/face_controller.gd" id="6_clj1d"]
+[ext_resource type="FontFile" uid="uid://0qfdlewhbyjf" path="res://assets/fonts/Skranji-Bold.ttf" id="7_sse7l"]
+[ext_resource type="PackedScene" uid="uid://bp1o2nrpbhp7e" path="res://modules/dice/assets/models/d10_dice.glb" id="8_8cbfa"]
+
+[sub_resource type="Resource" id="Resource_180xf"]
+script = ExtResource("3_3fw3o")
+metadata/_custom_type_script = "uid://ci18gds2uv7sd"
+
+[sub_resource type="Resource" id="Resource_a5h4m"]
+script = ExtResource("5_nbj17")
+metadata/_custom_type_script = "uid://m5xhnm0i2xke"
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8cbfa"]
+points = PackedVector3Array(0.009659788, 0.9547087, 0.051795576, -0.8629468, -0.4514206, -0.007765386, 0.6973228, -0.44824538, -0.51602274, 0.6991875, -0.41957304, 0.5316973, -0.711921, 0.4511706, -0.5192169, -0.703777, 0.44597182, 0.49766067, 0.818519, 0.4790415, -0.007692279, 0.2769068, 0.4452246, -0.80923, -0.25979424, -0.47948274, -0.7869593, -0.02004862, -0.95983934, 0.05203554, -0.28594422, -0.38438427, 0.82031244, 0.27690297, 0.44521862, 0.82350487, 0.009913012, 0.9710277, -0.038273025, 0.857955, 0.27245545, -0.098840326, 0.039548904, -0.953161, -0.037437383, -0.34572962, -0.26644972, -0.7777043, -0.2813823, -0.43627247, 0.8071011, 0.7052568, -0.45330802, 0.505938, -0.77245575, 0.15044528, 0.35320944, 0.30821848, 0.35785738, -0.81358963, -0.3216848, 0.75351936, 0.23321936, 0.8422366, 0.26749367, 0.081420824, -0.020048825, -0.9598525, -0.037750356, -0.65110224, 0.33037063, 0.56299615, 0.73668385, -0.36308962, 0.47649232, 0.2492123, 0.47878167, -0.7861088, 0.67322314, -0.48231182, -0.4903061, 0.63678604, -0.29838884, -0.57516545, 0.36956543, 0.23957515, 0.7713049, 0.28118774, -0.7835109, 0.20297639, -0.8591472, -0.32946277, 0.05199231, 0.8311653, 0.12136098, -0.19047652)
+
+[node name="Dice" type="RigidBody3D" unique_id=1600995798 node_paths=PackedStringArray("sub_viewport", "face_controller")]
+script = ExtResource("1_8cbfa")
+sub_viewport = NodePath("SubViewport")
+face_controller = NodePath("SubViewport/FaceController")
+definition = SubResource("Resource_180xf")
+content = SubResource("Resource_a5h4m")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=1398002143]
+size = Vector2i(1024, 1024)
+render_target_update_mode = 4
+
+[node name="FaceController" type="Control" parent="SubViewport" unique_id=1829703862]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_clj1d")
+custom_font = ExtResource("7_sse7l")
+
+[node name="d10_dice" parent="." unique_id=330510403 instance=ExtResource("8_8cbfa")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1871076386]
+shape = SubResource("ConvexPolygonShape3D_8cbfa")
+
+[editable path="d10_dice"]

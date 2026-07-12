@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://ox43pb757lq0"
-path="res://.godot/imported/Skranji-Regular.ttf-562b3ccdbea5a26646a1ce885c54487d.fontdata"
+uid="uid://end53a5seffa"
+path="res://.godot/imported/Almendra-Regular.ttf-7231c1c106136be37557647a31abc06e.fontdata"
 
 [deps]
 
-source_file="res://resources/fonts/Skranji-Regular.ttf"
-dest_files=["res://.godot/imported/Skranji-Regular.ttf-562b3ccdbea5a26646a1ce885c54487d.fontdata"]
+source_file="res://assets/fonts/Almendra-Regular.ttf"
+dest_files=["res://.godot/imported/Almendra-Regular.ttf-7231c1c106136be37557647a31abc06e.fontdata"]
 
 [params]
 

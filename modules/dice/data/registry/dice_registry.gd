@@ -53,6 +53,8 @@ static func get_definition(type: String) -> DiceDefinition:
 	def.geometry = geometry_list
 	return def
 
+
+## Crea las caras del dado. Índices 0,1 / 2-3 / 4-5 son las caras opuestas
 static func create_single_value_content(values: Array) -> DiceContent:
 	var content = DiceContent.new()
 	for val in values:

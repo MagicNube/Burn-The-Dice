@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://0qfdlewhbyjf"
-path="res://.godot/imported/Skranji-Bold.ttf-0c4759349205c0d09a254a5e61decb2c.fontdata"
+uid="uid://ox43pb757lq0"
+path="res://.godot/imported/Skranji-Regular.ttf-1fdd733ae6bec53ddd5c2e1fd290dd3a.fontdata"
 
 [deps]
 
-source_file="res://resources/fonts/Skranji-Bold.ttf"
-dest_files=["res://.godot/imported/Skranji-Bold.ttf-0c4759349205c0d09a254a5e61decb2c.fontdata"]
+source_file="res://assets/fonts/Skranji-Regular.ttf"
+dest_files=["res://.godot/imported/Skranji-Regular.ttf-1fdd733ae6bec53ddd5c2e1fd290dd3a.fontdata"]
 
 [params]
 

@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cpayocsgcarcj"
-path="res://.godot/imported/Almendra-Bold.ttf-9e50f120177d3b6021bb527d54e7ab3c.fontdata"
+uid="uid://0qfdlewhbyjf"
+path="res://.godot/imported/Skranji-Bold.ttf-1b2fe048688a6f1db495238f0c1ce23f.fontdata"
 
 [deps]
 
-source_file="res://resources/fonts/Almendra-Bold.ttf"
-dest_files=["res://.godot/imported/Almendra-Bold.ttf-9e50f120177d3b6021bb527d54e7ab3c.fontdata"]
+source_file="res://assets/fonts/Skranji-Bold.ttf"
+dest_files=["res://.godot/imported/Skranji-Bold.ttf-1b2fe048688a6f1db495238f0c1ce23f.fontdata"]
 
 [params]
 

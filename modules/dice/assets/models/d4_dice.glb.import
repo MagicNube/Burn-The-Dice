@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://080iecjud3il"
-path="res://.godot/imported/d6_dice.glb-132905739c64fb525c355cf17b2f6d9f.scn"
+uid="uid://c84kct7q2aoa0"
+path="res://.godot/imported/d4_dice.glb-453a195ac6ed2414ea59591f2328b270.scn"
 
 [deps]
 
-source_file="res://assets/models/dice/d6_dice.glb"
-dest_files=["res://.godot/imported/d6_dice.glb-132905739c64fb525c355cf17b2f6d9f.scn"]
+source_file="res://modules/dice/assets/models/d4_dice.glb"
+dest_files=["res://.godot/imported/d4_dice.glb-453a195ac6ed2414ea59591f2328b270.scn"]
 
 [params]
 

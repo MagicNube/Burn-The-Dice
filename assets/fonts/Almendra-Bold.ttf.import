@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://end53a5seffa"
-path="res://.godot/imported/Almendra-Regular.ttf-a81f1401ba9f7640a2ae8b652639898f.fontdata"
+uid="uid://cpayocsgcarcj"
+path="res://.godot/imported/Almendra-Bold.ttf-5cab283cb9325c27b2c9676200ac2e48.fontdata"
 
 [deps]
 
-source_file="res://resources/fonts/Almendra-Regular.ttf"
-dest_files=["res://.godot/imported/Almendra-Regular.ttf-a81f1401ba9f7640a2ae8b652639898f.fontdata"]
+source_file="res://assets/fonts/Almendra-Bold.ttf"
+dest_files=["res://.godot/imported/Almendra-Bold.ttf-5cab283cb9325c27b2c9676200ac2e48.fontdata"]
 
 [params]
 

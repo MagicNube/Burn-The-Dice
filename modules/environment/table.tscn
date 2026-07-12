@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://5nt0hf6cqtrw"]
 
-[ext_resource type="Script" uid="uid://bta6tefgi4mj1" path="res://scenes/environment/table.gd" id="1_3x8lu"]
-[ext_resource type="PackedScene" uid="uid://cg5g7yrjborud" path="res://dice.tscn" id="2_180xf"]
+[ext_resource type="Script" uid="uid://bta6tefgi4mj1" path="res://modules/environment/table.gd" id="1_3x8lu"]
+[ext_resource type="PackedScene" uid="uid://cg5g7yrjborud" path="res://modules/dice/scenes/dice.tscn" id="2_180xf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vx71s"]
 albedo_color = Color(0.33437502, 0.22008668, 0.07314454, 1)

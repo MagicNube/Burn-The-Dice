@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://crii5udlj7ovc"]
+
+[ext_resource type="Script" uid="uid://cpdc4oau5qndd" path="res://modules/dice/runtime/dice.gd" id="1_bhcfh"]
+[ext_resource type="Script" uid="uid://va6l455mns1j" path="res://modules/dice/data/definitions/face_geometry.gd" id="2_bhcfh"]
+[ext_resource type="Script" uid="uid://ci18gds2uv7sd" path="res://modules/dice/data/definitions/dice_definition.gd" id="3_kf5ct"]
+[ext_resource type="Script" uid="uid://bnyhpdwia5iq8" path="res://modules/dice/data/content/face_content.gd" id="4_k7ruh"]
+[ext_resource type="Script" uid="uid://m5xhnm0i2xke" path="res://modules/dice/data/content/dice_content.gd" id="5_r72ss"]
+[ext_resource type="Script" uid="uid://cjit44as410nm" path="res://modules/dice/ui/face_controller.gd" id="6_kf5ct"]
+[ext_resource type="PackedScene" uid="uid://080iecjud3il" path="res://modules/dice/assets/models/d6_dice.glb" id="6_uxw5b"]
+[ext_resource type="FontFile" uid="uid://0qfdlewhbyjf" path="res://assets/fonts/Skranji-Bold.ttf" id="7_k7ruh"]
+
+[sub_resource type="Resource" id="Resource_180xf"]
+script = ExtResource("3_kf5ct")
+metadata/_custom_type_script = "uid://ci18gds2uv7sd"
+
+[sub_resource type="Resource" id="Resource_a5h4m"]
+script = ExtResource("5_r72ss")
+metadata/_custom_type_script = "uid://m5xhnm0i2xke"
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hdk1s"]
+points = PackedVector3Array(-0.7003613, -0.7004, -0.7004, 0.70036787, 0.7004, 0.7004, 0.70036787, 0.7004, -0.7004, -0.7003613, 0.7004, 0.7004, 0.70036787, -0.7004, 0.7004, -0.7003613, 0.7004, -0.7004, 0.70036787, -0.7004, -0.7004, -0.7003613, -0.7004, 0.7004)
+
+[node name="Dice" type="RigidBody3D" unique_id=1600995798 node_paths=PackedStringArray("mesh_instance", "sub_viewport", "face_controller")]
+script = ExtResource("1_bhcfh")
+mesh_instance = NodePath("d6_dice/1d6")
+sub_viewport = NodePath("SubViewport")
+face_controller = NodePath("SubViewport/FaceController")
+definition = SubResource("Resource_180xf")
+content = SubResource("Resource_a5h4m")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=1398002143]
+size = Vector2i(1024, 1024)
+render_target_update_mode = 4
+
+[node name="FaceController" type="Control" parent="SubViewport" unique_id=1829703862]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_kf5ct")
+custom_font = ExtResource("7_k7ruh")
+
+[node name="d6_dice" parent="." unique_id=1679539165 instance=ExtResource("6_uxw5b")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1669031441]
+shape = SubResource("ConvexPolygonShape3D_hdk1s")
+
+[editable path="d6_dice"]
