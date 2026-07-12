@@ -20,8 +20,9 @@ metadata/_custom_type_script = "uid://m5xhnm0i2xke"
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_h0l5x"]
 points = PackedVector3Array(-0.7003613, -0.7004, -0.7004, 0.70036787, 0.7004, 0.7004, 0.70036787, 0.7004, -0.7004, -0.7003613, 0.7004, 0.7004, 0.70036787, -0.7004, 0.7004, -0.7003613, 0.7004, -0.7004, 0.70036787, -0.7004, -0.7004, -0.7003613, -0.7004, 0.7004)
 
-[node name="Dice" type="RigidBody3D" unique_id=1600995798 node_paths=PackedStringArray("sub_viewport", "face_controller")]
+[node name="Dice" type="RigidBody3D" unique_id=1600995798 node_paths=PackedStringArray("mesh_instance", "sub_viewport", "face_controller")]
 script = ExtResource("1_h0l5x")
+mesh_instance = NodePath("d6_dice/1d6")
 sub_viewport = NodePath("SubViewport")
 face_controller = NodePath("SubViewport/FaceController")
 definition = SubResource("Resource_180xf")

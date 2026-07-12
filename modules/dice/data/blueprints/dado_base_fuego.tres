@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DieBlueprint" format=3 uid="uid://bkapncxjx52tq"]
+
+[ext_resource type="Script" uid="uid://c3wkq3a6r4xe6" path="res://modules/dice/data/blueprints/die_blueprint.gd" id="1_6plo2"]
+
+[resource]
+script = ExtResource("1_6plo2")
+die_name = "Dado Base de Agua"
+element = 1
+faces = Array[String](["1", "2", "3", "4"])
+metadata/_custom_type_script = "uid://c3wkq3a6r4xe6"

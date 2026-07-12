@@ -10,10 +10,14 @@ var _is_rolling: bool = false
 var _markers: Array[MarkerFace] = []
 
 func _ready() -> void:
-	definition = DiceRegistry.get_definition("d6")
-	content = DiceRegistry.create_single_value_content([1, 6, 5, 2, 3, 4])
-	
 	sub_viewport.render_target_update_mode = SubViewport.UPDATE_ALWAYS
+	sleeping_state_changed.connect(_on_sleeping_state_changed)
+
+func initialize(blueprint: DieBlueprint) -> void:
+	var die_type: DieType.Type = blueprint.die_type
+	
+	definition = DiceRegistry.get_definition(die_type)
+	content = DiceRegistry.create_single_value_content(blueprint.get_faces())
 	
 	if definition != null:
 		for geo in definition.geometry:
@@ -24,15 +28,13 @@ func _ready() -> void:
 			_markers.append(marker)
 			
 	if definition != null and content != null:
-		face_controller.setup_faces(definition, content)
+		face_controller.setup_faces(definition, content, die_type)
 		
 	var dynamic_material = StandardMaterial3D.new()
 	dynamic_material.roughness = 0.2
 	dynamic_material.metallic = 0.0
 	dynamic_material.albedo_texture = sub_viewport.get_texture()
 	mesh_instance.set_surface_override_material(0, dynamic_material)
-	
-	sleeping_state_changed.connect(_on_sleeping_state_changed)
 
 func _input_event(_camera: Node, event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
@@ -49,11 +51,9 @@ func _on_sleeping_state_changed() -> void:
 		_is_rolling = false
 		if definition == null or content == null: return
 		
-		var winner_id = definition.get_winning_face_id(_markers)[0]
-		var loser_id = definition.get_winning_face_id(_markers)[1]
+		var resultados = definition.get_winning_face_id(_markers)
+		var winner_id = resultados
 		
 		if winner_id != -1 and winner_id < content.faces.size():
 			var result = content.faces[winner_id].values
-			var opposite = content.faces[loser_id].values
-			print("🎲 Resultado ID ", winner_id, ": ", result, "Cara Opuesta:", opposite)
-			 
+			print("🎲 Resultado ID ", winner_id, ": ", result)

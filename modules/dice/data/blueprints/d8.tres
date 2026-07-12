@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DieBlueprint" format=3 uid="uid://5dhlxjjtmlhd"]
+
+[ext_resource type="Script" uid="uid://c3wkq3a6r4xe6" path="res://modules/dice/data/blueprints/die_blueprint.gd" id="1_mq4r8"]
+
+[resource]
+script = ExtResource("1_mq4r8")
+die_name = "D8 TEST"
+die_type = 2
+faces = Array[String](["1", "2", "3", "4", "5", "6", "7", "8"])
+metadata/_custom_type_script = "uid://c3wkq3a6r4xe6"

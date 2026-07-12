@@ -1,12 +1,12 @@
 class_name DiceRegistry
 extends RefCounted
 
-static func get_definition(type: String) -> DiceDefinition:
+static func get_definition(type: DieType.Type) -> DiceDefinition:
 	var def = DiceDefinition.new()
 	var geometry_list: Array[FaceGeometry] = []
 	
 	match type:
-		"d6":
+		DieType.Type.D6:
 			geometry_list = [
 				FaceGeometry.new(Vector3(0.0000, 0.0000, 0.7004), Vector2(0.1667, 0.8333), 90.00),
 				FaceGeometry.new(Vector3(0.0000, 0.0000, -0.7004), Vector2(0.5000, 0.8333), 90.00),
@@ -15,14 +15,14 @@ static func get_definition(type: String) -> DiceDefinition:
 				FaceGeometry.new(Vector3(0.7004, 0.0000, 0.0000), Vector2(0.1667, 0.1667), 90.00),
 				FaceGeometry.new(Vector3(-0.7004, 0.0000, 0.0000), Vector2(0.5000, 0.1667), -180.00)
 			]
-		"d4":
+		DieType.Type.D4:
 			geometry_list = [
 				FaceGeometry.new(Vector3(-0.3914, 0.0000, 0.1218), Vector2(0.1405, 0.7636), 150.71),
 				FaceGeometry.new(Vector3(0.1957, -0.2946, 0.1218), Vector2(0.7249, 0.7342), -149.34),
 				FaceGeometry.new(Vector3(0.0000, 0.0000, -0.3655), Vector2(0.1409, 0.2808), 36.71),
 				FaceGeometry.new(Vector3(0.1957, 0.2946, 0.1218), Vector2(0.7139, 0.2361), -145.97)
 			]
-		"d8":
+		DieType.Type.D8:
 			geometry_list = [
 				FaceGeometry.new(Vector3(-0.3454, -0.3454, -0.3454), Vector2(0.0992, 0.8333), -90.00),
 				FaceGeometry.new(Vector3(0.3454, -0.3454, -0.3454), Vector2(0.3898, 0.8333), 150.00),
@@ -33,7 +33,7 @@ static func get_definition(type: String) -> DiceDefinition:
 				FaceGeometry.new(Vector3(-0.3454, 0.3454, 0.3454), Vector2(0.3898, 0.1667), -90.00),
 				FaceGeometry.new(Vector3(0.3454, 0.3454, -0.3454), Vector2(0.6804, 0.1667), 30.00)
 			]
-		"d10":
+		DieType.Type.D10:
 			geometry_list = [
 				FaceGeometry.new(Vector3(-0.4733, -0.3438, -0.3618), Vector2(0.6651, 0.8498), 121.70),
 				FaceGeometry.new(Vector3(0.4733, -0.3438, 0.3618), Vector2(0.1341, 0.7627), 26.58),
