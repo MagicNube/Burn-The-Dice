@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnqst67qlmid1"
-path="res://.godot/imported/golpe_igneo.png-59133b363b36a797276f08a85eeb8fdb.ctex"
+uid="uid://h6rq65fyilu6"
+path="res://.godot/imported/marea_alta.png-e3d5bd6386b81931cfabb18ebd0bf994.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://modules/cards/assets/artwork/golpe_igneo.png"
-dest_files=["res://.godot/imported/golpe_igneo.png-59133b363b36a797276f08a85eeb8fdb.ctex"]
+source_file="res://modules/cards/assets/draws/marea_alta.png"
+dest_files=["res://.godot/imported/marea_alta.png-e3d5bd6386b81931cfabb18ebd0bf994.ctex"]
 
 [params]
 

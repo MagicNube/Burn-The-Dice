@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://beh7e178sv0q4"
-path="res://.godot/imported/GotaFria.png-89ed64478670eb3a16876740b338cf9b.ctex"
+uid="uid://bxs5osi0tlpob"
+path="res://.godot/imported/coque_termico.png-78644efc2d606463631303e918fc6480.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://modules/cards/assets/artwork/GotaFria.png"
-dest_files=["res://.godot/imported/GotaFria.png-89ed64478670eb3a16876740b338cf9b.ctex"]
+source_file="res://modules/cards/assets/draws/coque_termico.png"
+dest_files=["res://.godot/imported/coque_termico.png-78644efc2d606463631303e918fc6480.ctex"]
 
 [params]
 

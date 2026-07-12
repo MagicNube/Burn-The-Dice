@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dif1cnsmxhfkq"
-path="res://.godot/imported/presion_abisal.png-de4d6567a562b38a86f9a90aff5a6eca.ctex"
+uid="uid://beh7e178sv0q4"
+path="res://.godot/imported/GotaFria.png-293f3d11fb236f4dd2438f92eafd6ecb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://modules/cards/assets/artwork/presion_abisal.png"
-dest_files=["res://.godot/imported/presion_abisal.png-de4d6567a562b38a86f9a90aff5a6eca.ctex"]
+source_file="res://modules/cards/assets/draws/GotaFria.png"
+dest_files=["res://.godot/imported/GotaFria.png-293f3d11fb236f4dd2438f92eafd6ecb.ctex"]
 
 [params]
 

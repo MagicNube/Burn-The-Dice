@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br2mb2g5huq44"
-path="res://.godot/imported/gota_fria.png-6150b85be9fbab28cb52e6f9a7bfa5ce.ctex"
+uid="uid://huitv24ffcxe"
+path="res://.godot/imported/00.png-4cc8adf3c12b1dcb9dca23bba68e9217.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://modules/cards/assets/artwork/gota_fria.png"
-dest_files=["res://.godot/imported/gota_fria.png-6150b85be9fbab28cb52e6f9a7bfa5ce.ctex"]
+source_file="res://modules/cards/assets/artwork/00.png"
+dest_files=["res://.godot/imported/00.png-4cc8adf3c12b1dcb9dca23bba68e9217.ctex"]
 
 [params]
 

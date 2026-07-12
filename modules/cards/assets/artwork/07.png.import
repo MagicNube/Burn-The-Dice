@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ec6tjhcvv321"
-path="res://.godot/imported/corte_acuatico.png-007884e4e2cf616b34b2d9bb4074eaef.ctex"
+uid="uid://cuqcnwmcmdk5a"
+path="res://.godot/imported/07.png-411c35d66450c1384505d4c3690183dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://modules/cards/assets/artwork/corte_acuatico.png"
-dest_files=["res://.godot/imported/corte_acuatico.png-007884e4e2cf616b34b2d9bb4074eaef.ctex"]
+source_file="res://modules/cards/assets/artwork/07.png"
+dest_files=["res://.godot/imported/07.png-411c35d66450c1384505d4c3690183dc.ctex"]
 
 [params]
 

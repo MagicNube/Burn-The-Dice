@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlo08n8cul0h2"
-path="res://.godot/imported/erupcion.jpg-d321b5d522c3b6a66d5b502e244e89fe.ctex"
+uid="uid://br2mb2g5huq44"
+path="res://.godot/imported/gota_fria.png-6799deaf2825320dd55c71338fd207cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://modules/cards/assets/artwork/erupcion.jpg"
-dest_files=["res://.godot/imported/erupcion.jpg-d321b5d522c3b6a66d5b502e244e89fe.ctex"]
+source_file="res://modules/cards/assets/draws/gota_fria.png"
+dest_files=["res://.godot/imported/gota_fria.png-6799deaf2825320dd55c71338fd207cc.ctex"]
 
 [params]
 

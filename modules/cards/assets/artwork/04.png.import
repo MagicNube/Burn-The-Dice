@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bglr211r1pduy"
-path="res://.godot/imported/incinerar.jpg-9de2d1e3109c8daf8084f9a0858d18d2.ctex"
+uid="uid://b4pmskcoh7ea0"
+path="res://.godot/imported/04.png-35ed9be7ff1054f7c7a30754e3ef49c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://modules/cards/assets/artwork/incinerar.jpg"
-dest_files=["res://.godot/imported/incinerar.jpg-9de2d1e3109c8daf8084f9a0858d18d2.ctex"]
+source_file="res://modules/cards/assets/artwork/04.png"
+dest_files=["res://.godot/imported/04.png-35ed9be7ff1054f7c7a30754e3ef49c7.ctex"]
 
 [params]
 

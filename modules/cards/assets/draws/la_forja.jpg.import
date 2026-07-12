@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cg7onjqmq3cnf"
-path="res://.godot/imported/la_forja.jpg-71de2ecdfca4a81ef3e7fbe7de3ac69c.ctex"
+path="res://.godot/imported/la_forja.jpg-2020328e4611690efa173b0f359801bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://modules/cards/assets/artwork/la_forja.jpg"
-dest_files=["res://.godot/imported/la_forja.jpg-71de2ecdfca4a81ef3e7fbe7de3ac69c.ctex"]
+source_file="res://modules/cards/assets/draws/la_forja.jpg"
+dest_files=["res://.godot/imported/la_forja.jpg-2020328e4611690efa173b0f359801bb.ctex"]
 
 [params]
 

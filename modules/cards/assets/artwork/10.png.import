@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxs5osi0tlpob"
-path="res://.godot/imported/coque_termico.png-897a13f94727bf365ffbd21044c2a564.ctex"
+uid="uid://yncjm6v67247"
+path="res://.godot/imported/10.png-1e1ed6d5e2b299001a58597d9faf8ba6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://modules/cards/assets/artwork/coque_termico.png"
-dest_files=["res://.godot/imported/coque_termico.png-897a13f94727bf365ffbd21044c2a564.ctex"]
+source_file="res://modules/cards/assets/artwork/10.png"
+dest_files=["res://.godot/imported/10.png-1e1ed6d5e2b299001a58597d9faf8ba6.ctex"]
 
 [params]
 

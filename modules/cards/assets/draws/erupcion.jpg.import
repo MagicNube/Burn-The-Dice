@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://41vu330128lv"
-path="res://.godot/imported/fenix.jpg-3f3055f9fc37208e2089ee182ba02881.ctex"
+uid="uid://dlo08n8cul0h2"
+path="res://.godot/imported/erupcion.jpg-bdaf3c1c967fab75854ccd33035512c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://modules/cards/assets/artwork/fenix.jpg"
-dest_files=["res://.godot/imported/fenix.jpg-3f3055f9fc37208e2089ee182ba02881.ctex"]
+source_file="res://modules/cards/assets/draws/erupcion.jpg"
+dest_files=["res://.godot/imported/erupcion.jpg-bdaf3c1c967fab75854ccd33035512c7.ctex"]
 
 [params]
 

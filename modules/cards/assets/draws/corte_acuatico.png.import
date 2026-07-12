@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6vr7hhie2oup"
-path="res://.godot/imported/condensacion.png-9be29c15504921492c19526e4e6678e1.ctex"
+uid="uid://ec6tjhcvv321"
+path="res://.godot/imported/corte_acuatico.png-fab535e4f8b22c98251e785b36d7c983.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://modules/cards/assets/artwork/condensacion.png"
-dest_files=["res://.godot/imported/condensacion.png-9be29c15504921492c19526e4e6678e1.ctex"]
+source_file="res://modules/cards/assets/draws/corte_acuatico.png"
+dest_files=["res://.godot/imported/corte_acuatico.png-fab535e4f8b22c98251e785b36d7c983.ctex"]
 
 [params]
 
