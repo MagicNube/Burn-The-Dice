@@ -3,7 +3,7 @@ extends Node
 signal card_drawn(card_data: CardData)
 
 # Mano inicial temporal
-@export var initialHand: Array[CardData]
+@export var initial_hand: Array[CardData]
 
 # Baraja, mano y descartes o cartas usadas
 var deck: Array[CardData] = []
@@ -11,21 +11,32 @@ var hand: Array[CardData] = []
 var discards: Array[CardData] = []
 
 func _ready() -> void:
-	init_combat()
+	# Llamamos con deferred para esperar a que toda la escena este cargada y no se emitan señales antes de tiempo
+	call_deferred("init_combat")
+	CombatBus.card_consumed.connect(use_card)
 	
 # Funcion para establecer la baraja como la inicial y mezclarla
 func init_combat() -> void:
-	deck = initialHand.duplicate()
+	deck = initial_hand.duplicate()
+	# Este bucle es para hacer que cada carta sea unica aunque visualmente sean iguales con un ID unico
+	for i in range(deck.size()):
+		deck[i] = deck[i].duplicate()
 	deck.shuffle()
+	finish_turn()
 
 # Funcion para la secuencia al finalizar turno
 func finish_turn() -> void:
 	# Comprobacion de las cartas a robar
-	var cardsToDraw: int = 5 - hand.size()
-	if cardsToDraw == 0:
+	var cards_to_draw: int = 5 - hand.size()
+	# Comprobacion de las cartas disponibles para robar
+	var total_available_cards: int = deck.size() + discards.size()
+	# Cartas reales para robar
+	var real_cards_to_draw: int = min(cards_to_draw, total_available_cards)
+	
+	if real_cards_to_draw == 0:
 		return
 	
-	for i in cardsToDraw:
+	for i in real_cards_to_draw:
 		if deck.size() == 0:
 			restart_deck()
 		var drawn_card = deck.pop_front()
@@ -34,10 +45,12 @@ func finish_turn() -> void:
 		card_drawn.emit(drawn_card)
 	
 
+func use_card(card_data: CardData):
+	hand.erase(card_data)
+	discards.append(card_data)
+
 # Funcion para reinciar la baraja
 func restart_deck() -> void:
 	deck = discards.duplicate()
 	discards.clear()
 	deck.shuffle()
-	
-	

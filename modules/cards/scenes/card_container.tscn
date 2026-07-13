@@ -14,11 +14,24 @@ offset_bottom = 40.0
 
 [node name="DeckLogic" type="Node" parent="." unique_id=654175964]
 script = ExtResource("1_6lq55")
-initialHand = Array[ExtResource("2_g2s5y")]([ExtResource("3_v3mc7"), ExtResource("4_npy6w")])
+initial_hand = Array[ExtResource("2_g2s5y")]([ExtResource("4_npy6w"), ExtResource("3_v3mc7")])
 
 [node name="VisualHand" type="HBoxContainer" parent="." unique_id=1754189885 node_paths=PackedStringArray("deck_logic")]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -400.0
+offset_top = 68.0
+offset_right = 400.0
+offset_bottom = 268.0
+alignment = 1
 script = ExtResource("5_g2s5y")
 deck_logic = NodePath("../DeckLogic")
+
+[node name="NextTurnBtn" type="Button" parent="." unique_id=710774907]
+layout_mode = 0
+offset_left = 216.0
+offset_top = -15.0
+offset_right = 346.0
+offset_bottom = 16.0
+text = "Terminar Turno"
+
+[connection signal="pressed" from="NextTurnBtn" to="DeckLogic" method="finish_turn"]

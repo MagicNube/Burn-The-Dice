@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://t4gl1gkp7hc4" path="res://modules/cards/scripts/card.gd" id="2_7qf2j"]
 
 [node name="Card" type="TextureRect" unique_id=1512171938]
+custom_minimum_size = Vector2(120, 180)
 offset_right = 120.0
 offset_bottom = 180.0
 expand_mode = 1

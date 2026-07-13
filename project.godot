@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Burn The Dice"
-run/main_scene="uid://5nt0hf6cqtrw"
+run/main_scene="uid://dcxw77l77w3lx"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+CombatBus="*uid://bjwqeoyejsfme"
 
 [display]
 

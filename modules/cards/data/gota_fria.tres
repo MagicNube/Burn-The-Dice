@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://b5k070smi5k47"]
 
-[ext_resource type="Texture2D" uid="uid://beh7e178sv0q4" path="res://modules/cards/assets/draws/GotaFria.png" id="1_gddnd"]
+[ext_resource type="Texture2D" uid="uid://bb3ns0yxmax1b" path="res://modules/cards/assets/artwork/06.png" id="1_gddnd"]
 [ext_resource type="Script" uid="uid://e82klgj27n0y" path="res://modules/cards/scripts/card_data.gd" id="1_krl3m"]
 
 [resource]

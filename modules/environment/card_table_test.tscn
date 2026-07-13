@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dcxw77l77w3lx"]
+
+[ext_resource type="PackedScene" uid="uid://b2xqxw1kyug2w" path="res://modules/enemies/scenes/enemy.tscn" id="1_h07tw"]
+[ext_resource type="PackedScene" uid="uid://cvum1j81axbk0" path="res://modules/cards/scenes/card_container.tscn" id="1_igpsc"]
+
+[node name="CardTableTest" type="Node2D" unique_id=1548864301]
+
+[node name="Enemy" parent="." unique_id=1888884607 instance=ExtResource("1_h07tw")]
+position = Vector2(103, -132)
+
+[node name="Enemy2" parent="." unique_id=443690349 instance=ExtResource("1_h07tw")]
+position = Vector2(-87, -132)
+
+[node name="CardContainer" parent="." unique_id=1856316677 instance=ExtResource("1_igpsc")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=384940305]
+
+[editable path="CardContainer"]

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b2xqxw1kyug2w"]
+
+[ext_resource type="Texture2D" uid="uid://drkxhyim2gb70" path="res://icon.svg" id="1_vk2wj"]
+[ext_resource type="Script" uid="uid://ddenhweee6h5b" path="res://modules/enemies/scripts/drop_target.gd" id="2_lmiuf"]
+
+[node name="Enemy" type="Node2D" unique_id=1888884607]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1821849618]
+texture = ExtResource("1_vk2wj")
+
+[node name="DropTarget" type="Control" parent="." unique_id=1732333231]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -64.0
+offset_top = -65.0
+offset_right = 65.0
+offset_bottom = 64.0
+script = ExtResource("2_lmiuf")
