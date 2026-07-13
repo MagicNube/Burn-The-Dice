@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cvum1j81axbk0"]
+
+[ext_resource type="Script" uid="uid://uwsfpy762xp8" path="res://modules/cards/scripts/deck_logic.gd" id="1_6lq55"]
+[ext_resource type="Script" uid="uid://e82klgj27n0y" path="res://modules/cards/scripts/card_data.gd" id="2_g2s5y"]
+[ext_resource type="Resource" uid="uid://b5k070smi5k47" path="res://modules/cards/data/gota_fria.tres" id="3_v3mc7"]
+[ext_resource type="Resource" uid="uid://bxjaywi0r1wms" path="res://modules/cards/data/incinerar.tres" id="4_npy6w"]
+[ext_resource type="Script" uid="uid://d1oag58vf36ij" path="res://modules/cards/scripts/visual_hand.gd" id="5_g2s5y"]
+
+[node name="CardContainer" type="Control" unique_id=1856316677]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DeckLogic" type="Node" parent="." unique_id=654175964]
+script = ExtResource("1_6lq55")
+initialHand = Array[ExtResource("2_g2s5y")]([ExtResource("3_v3mc7"), ExtResource("4_npy6w")])
+
+[node name="VisualHand" type="HBoxContainer" parent="." unique_id=1754189885 node_paths=PackedStringArray("deck_logic")]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_g2s5y")
+deck_logic = NodePath("../DeckLogic")

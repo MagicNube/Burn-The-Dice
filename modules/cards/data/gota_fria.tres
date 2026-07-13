@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://b5k070smi5k47"]
+
+[ext_resource type="Texture2D" uid="uid://beh7e178sv0q4" path="res://modules/cards/assets/draws/GotaFria.png" id="1_gddnd"]
+[ext_resource type="Script" uid="uid://e82klgj27n0y" path="res://modules/cards/scripts/card_data.gd" id="1_krl3m"]
+
+[resource]
+script = ExtResource("1_krl3m")
+name = "Gota Fría"
+effect_description = "Si has quemado algún dado este turno, roba una carta y aplica 1 de Mojado a todos los enemigos."
+element = 1
+image = ExtResource("1_gddnd")
+metadata/_custom_type_script = "uid://e82klgj27n0y"
