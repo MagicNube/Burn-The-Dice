@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://c4dfmybyb2fqy"]
+
+[ext_resource type="Texture2D" uid="uid://dghoxqodsq71k" path="res://modules/cards/assets/artwork/ReversoCarta.png" id="1_pwjpg"]
+[ext_resource type="Script" uid="uid://b611f4bgmlh2c" path="res://modules/cards/scripts/stack_ui.gd" id="2_kdv2u"]
+[ext_resource type="FontFile" uid="uid://0qfdlewhbyjf" path="res://assets/fonts/Skranji-Bold.ttf" id="3_mmru0"]
+
+[node name="CardStackUI" type="TextureRect" unique_id=1512171938 node_paths=PackedStringArray("amountLabel")]
+custom_minimum_size = Vector2(120, 180)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -574.0
+offset_top = 103.0
+offset_right = -454.0
+offset_bottom = 283.0
+grow_vertical = 0
+texture = ExtResource("1_pwjpg")
+expand_mode = 1
+stretch_mode = 4
+script = ExtResource("2_kdv2u")
+amountLabel = NodePath("AmountLabel")
+
+[node name="StackNameLabel" type="Label" parent="." unique_id=1884301765]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -53.0
+offset_top = -22.0
+offset_right = 53.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.21960784, 0.4745098, 0, 1)
+theme_override_fonts/font = ExtResource("3_mmru0")
+theme_override_font_sizes/font_size = 16
+text = "Nombre de la pila"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AmountLabel" type="Label" parent="." unique_id=18596684]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -53.0
+offset_top = -83.0
+offset_right = 53.0
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.21960784, 0.4745098, 0, 1)
+theme_override_fonts/font = ExtResource("3_mmru0")
+theme_override_font_sizes/font_size = 82
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true

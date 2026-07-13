@@ -1,6 +1,8 @@
 extends Node
 
 signal card_drawn(card_data: CardData)
+signal deck_size_changed(amount: int)
+signal discards_size_changed(amount: int)
 
 # Mano inicial temporal
 @export var initial_hand: Array[CardData]
@@ -21,6 +23,11 @@ func init_combat() -> void:
 	# Este bucle es para hacer que cada carta sea unica aunque visualmente sean iguales con un ID unico
 	for i in range(deck.size()):
 		deck[i] = deck[i].duplicate()
+	
+	# Señal para actualizar contadores de pilas
+	deck_size_changed.emit(deck.size())
+	discards_size_changed.emit(discards.size())
+	
 	deck.shuffle()
 	finish_turn()
 
@@ -40,17 +47,27 @@ func finish_turn() -> void:
 		if deck.size() == 0:
 			restart_deck()
 		var drawn_card = deck.pop_front()
+		# Señal para actualizar contadores de pilas
+		deck_size_changed.emit(deck.size())
 		hand.push_front(drawn_card)
 		# Señal para enviar informacion de la carta robada a la interfaz
 		card_drawn.emit(drawn_card)
 	
 
+# Funcion para usar las cartas y mandarlas a la pila de descartes
 func use_card(card_data: CardData):
 	hand.erase(card_data)
 	discards.append(card_data)
+	# Señal para actualizar contadores de pilas
+	discards_size_changed.emit(discards.size())
 
 # Funcion para reinciar la baraja
 func restart_deck() -> void:
 	deck = discards.duplicate()
+	for i in range(deck.size()):
+		deck[i] = deck[i].duplicate()
 	discards.clear()
 	deck.shuffle()
+	# Señales para actualizar contadores de pilas
+	discards_size_changed.emit(0)
+	deck_size_changed.emit(deck.size())

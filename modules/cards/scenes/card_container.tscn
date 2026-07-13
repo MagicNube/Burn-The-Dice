@@ -1,16 +1,22 @@
 [gd_scene format=3 uid="uid://cvum1j81axbk0"]
 
 [ext_resource type="Script" uid="uid://uwsfpy762xp8" path="res://modules/cards/scripts/deck_logic.gd" id="1_6lq55"]
+[ext_resource type="Script" uid="uid://dpk2tjnhkfflm" path="res://modules/cards/scripts/card_container.gd" id="1_msj65"]
 [ext_resource type="Script" uid="uid://e82klgj27n0y" path="res://modules/cards/scripts/card_data.gd" id="2_g2s5y"]
 [ext_resource type="Resource" uid="uid://b5k070smi5k47" path="res://modules/cards/data/gota_fria.tres" id="3_v3mc7"]
 [ext_resource type="Resource" uid="uid://bxjaywi0r1wms" path="res://modules/cards/data/incinerar.tres" id="4_npy6w"]
 [ext_resource type="Script" uid="uid://d1oag58vf36ij" path="res://modules/cards/scripts/visual_hand.gd" id="5_g2s5y"]
+[ext_resource type="PackedScene" uid="uid://c4dfmybyb2fqy" path="res://modules/cards/scenes/card_stack_ui.tscn" id="7_1lrnc"]
 
-[node name="CardContainer" type="Control" unique_id=1856316677]
+[node name="CardContainer" type="Control" unique_id=1856316677 node_paths=PackedStringArray("draw_stack_ui", "discard_stack_ui", "deck_logic")]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_msj65")
+draw_stack_ui = NodePath("DrawStack")
+discard_stack_ui = NodePath("DiscardStack")
+deck_logic = NodePath("DeckLogic")
 
 [node name="DeckLogic" type="Node" parent="." unique_id=654175964]
 script = ExtResource("1_6lq55")
@@ -34,4 +40,33 @@ offset_right = 346.0
 offset_bottom = 16.0
 text = "Terminar Turno"
 
+[node name="DiscardStack" parent="." unique_id=1512171938 instance=ExtResource("7_1lrnc")]
+layout_mode = 1
+offset_left = 439.0
+offset_top = 92.0
+offset_right = 559.0
+offset_bottom = 272.0
+
+[node name="StackNameLabel" parent="DiscardStack" index="0" unique_id=1884301765]
+text = "Pila de descartes"
+
+[node name="DrawStack" parent="." unique_id=1070446616 instance=ExtResource("7_1lrnc")]
+layout_mode = 0
+anchors_preset = 0
+anchor_top = 0.0
+anchor_bottom = 0.0
+offset_left = -566.0
+offset_top = 132.0
+offset_right = -446.0
+offset_bottom = 312.0
+grow_vertical = 1
+
+[node name="StackNameLabel" parent="DrawStack" index="0" unique_id=1884301765]
+text = "Pila de cartas"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=441759291]
+
 [connection signal="pressed" from="NextTurnBtn" to="DeckLogic" method="finish_turn"]
+
+[editable path="DiscardStack"]
+[editable path="DrawStack"]
