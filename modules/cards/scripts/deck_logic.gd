@@ -40,7 +40,7 @@ func finish_turn() -> void:
 	# Cartas reales para robar
 	var real_cards_to_draw: int = min(cards_to_draw, total_available_cards)
 	
-	if real_cards_to_draw == 0:
+	if real_cards_to_draw <= 0:
 		return
 	
 	for i in real_cards_to_draw:

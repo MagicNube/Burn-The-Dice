@@ -1,10 +1,13 @@
 [gd_resource type="Resource" script_class="CardBlueprint" format=3 uid="uid://c2clg3s1b52gd"]
 
 [ext_resource type="Script" uid="uid://e82klgj27n0y" path="res://modules/cards/data/blueprints/card_blueprint.gd" id="1_5xx3q"]
+[ext_resource type="Texture2D" uid="uid://bb3ns0yxmax1b" path="res://modules/cards/assets/artwork/06.png" id="1_vbuft"]
 
 [resource]
 script = ExtResource("1_5xx3q")
 name = "Gota Fría"
-effect_description = "Si has quemado algún dado este turno, roba una carta y aplica 1 de Mojado a todos los enemigos."
 element = 1
+target = 3
+effect_description = "Si has quemado algún dado este turno, roba una carta y aplica 1 de Mojado a todos los enemigos."
+image = ExtResource("1_vbuft")
 metadata/_custom_type_script = "uid://e82klgj27n0y"

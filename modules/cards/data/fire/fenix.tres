@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardBlueprint" format=3 uid="uid://cq5miy6vfjdev"]
+
+[ext_resource type="Script" uid="uid://e82klgj27n0y" path="res://modules/cards/data/blueprints/card_blueprint.gd" id="1_ydqq2"]
+[ext_resource type="Texture2D" uid="uid://b8owjwa2q77oe" path="res://modules/cards/assets/artwork/05.png" id="1_ykxpd"]
+
+[resource]
+script = ExtResource("1_ydqq2")
+name = "Fénix"
+elemental_cost = 5
+neutral_cost = 1
+rarity = 2
+target = 2
+effect_description = "Te cura 7 de vida. Inflige 4 de daño a todos los enemigos que estén Quemados."
+base_damage = -7
+image = ExtResource("1_ykxpd")
+metadata/_custom_type_script = "uid://e82klgj27n0y"

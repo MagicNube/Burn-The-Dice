@@ -16,5 +16,5 @@ position = Vector2(-87, -132)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=384940305]
 
 [editable path="CardContainer"]
-[editable path="CardContainer/DrawStack"]
 [editable path="CardContainer/DiscardStack"]
+[editable path="CardContainer/DrawStack"]

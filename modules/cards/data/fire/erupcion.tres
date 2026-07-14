@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CardBlueprint" format=3 uid="uid://dulki826s8xq1"]
+
+[ext_resource type="Script" uid="uid://e82klgj27n0y" path="res://modules/cards/data/blueprints/card_blueprint.gd" id="1_ct6g5"]
+[ext_resource type="Texture2D" uid="uid://b4pmskcoh7ea0" path="res://modules/cards/assets/artwork/04.png" id="1_jbx3d"]
+
+[resource]
+script = ExtResource("1_ct6g5")
+name = "Erupción"
+elemental_cost = 6
+neutral_cost = 2
+rarity = 3
+effect_description = "Inflige 14 de daño. Si el enemigo está Mojado, consume las cargas y hace +3 de daño por cada carga de Mojado consumida."
+base_damage = 14
+image = ExtResource("1_jbx3d")
+metadata/_custom_type_script = "uid://e82klgj27n0y"

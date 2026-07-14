@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardBlueprint" format=3 uid="uid://c0b38v0uaec3x"]
+
+[ext_resource type="Texture2D" uid="uid://cr6vmo72o814h" path="res://modules/cards/assets/artwork/03.png" id="1_4t20p"]
+[ext_resource type="Script" uid="uid://e82klgj27n0y" path="res://modules/cards/data/blueprints/card_blueprint.gd" id="1_kb0ar"]
+
+[resource]
+script = ExtResource("1_kb0ar")
+name = "La Forja"
+elemental_cost = 3
+target = 3
+effect_description = "Añade dos Dados Combustible a tu mano instantáneamente. Al acabar el enfrentamiento desaparecen. Se consume la carta hasta que acabe el enfrentamiento."
+image = ExtResource("1_4t20p")
+metadata/_custom_type_script = "uid://e82klgj27n0y"
