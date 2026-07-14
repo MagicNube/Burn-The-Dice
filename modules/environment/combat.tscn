@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bhiueuw4wrpar"]
+
+[node name="Combat UI" type="CanvasLayer" unique_id=300134934]
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=2057313457]
+offset_right = 40.0
+offset_bottom = 40.0

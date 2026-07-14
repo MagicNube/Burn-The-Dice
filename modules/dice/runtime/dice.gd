@@ -15,7 +15,6 @@ func _ready() -> void:
 
 func initialize(blueprint: DieBlueprint) -> void:
 	var die_type: DieType.Type = blueprint.die_type
-	
 	definition = DiceRegistry.get_definition(die_type)
 	content = DiceRegistry.create_single_value_content(blueprint.get_faces())
 	
@@ -24,6 +23,27 @@ func initialize(blueprint: DieBlueprint) -> void:
 			var marker = MarkerFace.new()
 			marker.id = geo.id
 			marker.position = Vector3(geo.center_local.x, geo.center_local.z, -geo.center_local.y)
+			marker.local_normal = Vector3(geo.local_normal.x, geo.local_normal.z, -geo.local_normal.y).normalized()
+			
+			var debug_mesh = MeshInstance3D.new()
+			var sphere = SphereMesh.new()
+			sphere.radius = 0.25
+			sphere.height = 0.1
+			debug_mesh.mesh = sphere
+			
+			var material := StandardMaterial3D.new()
+			match geo.id:
+				0:
+					material.albedo_color = Color.RED
+				1:
+					material.albedo_color = Color.BLUE
+				2:
+					material.albedo_color = Color.GREEN
+				3:
+					material.albedo_color = Color.YELLOW
+					
+			debug_mesh.material_override = material
+			marker.add_child(debug_mesh)
 			add_child(marker)
 			_markers.append(marker)
 			
@@ -38,7 +58,7 @@ func initialize(blueprint: DieBlueprint) -> void:
 
 func _input_event(_camera: Node, event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		roll(Vector3(randf_range(-2, 2), 10, randf_range(-2, 2)), Vector3(randf_range(-5, 5), randf_range(-5, 5), randf_range(-5, 5)))
+		roll(Vector3(randf_range(-5, 5), 5, randf_range(-5, 5)), Vector3(randf_range(-15, 15), randf_range(-15, 15), randf_range(-15, 15)))
 
 func roll(impulse: Vector3, torque: Vector3) -> void:
 	_is_rolling = true
@@ -51,8 +71,7 @@ func _on_sleeping_state_changed() -> void:
 		_is_rolling = false
 		if definition == null or content == null: return
 		
-		var resultados = definition.get_winning_face_id(_markers)
-		var winner_id = resultados
+		var winner_id = definition.get_winning_face_id(_markers)
 		
 		if winner_id != -1 and winner_id < content.faces.size():
 			var result = content.faces[winner_id].values

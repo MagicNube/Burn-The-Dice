@@ -16,10 +16,10 @@ extends Resource
 	set(value):
 		is_combustible = value
 		if not value:
-			special_effect = ""
+			burn_effect = "Incombustible"
 		notify_property_list_changed()
 
-@export_multiline var special_effect: String 
+@export_multiline var burn_effect: String 
 
 @export var is_rigged: bool = false:
 	set(value):

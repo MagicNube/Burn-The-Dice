@@ -8,6 +8,10 @@ func get_winning_face_id(markers: Array[MarkerFace]) -> int:
 	var winner = -1
 
 	for marker in markers:
+		print(
+		"ID:", marker.id,
+		" Pos:", marker.global_position
+	)
 		if marker.global_position.y > highest:
 			highest = marker.global_position.y
 			winner = marker.id
