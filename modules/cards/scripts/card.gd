@@ -2,13 +2,13 @@ class_name Card
 extends TextureRect
 
 # Datos de la carta
-var data: CardData
+var data: CardBlueprint
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
 
-func setup(card_data: CardData) -> void:
+func setup(card_data: CardBlueprint) -> void:
 	data = card_data
 	texture = card_data.image
 

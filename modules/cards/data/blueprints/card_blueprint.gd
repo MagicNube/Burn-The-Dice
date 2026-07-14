@@ -1,4 +1,4 @@
-class_name CardData
+class_name CardBlueprint
 extends Resource
 
 # Datos de las cartas
@@ -7,5 +7,6 @@ extends Resource
 @export var elemental_cost: int
 @export var neutral_cost: int
 @export var element: Element.Type
+@export var damage: int
 # Por ahora sera la carta en si en el futuro unicamente la imagen de la carta
 @export var image: Texture2D

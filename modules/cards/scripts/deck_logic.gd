@@ -1,16 +1,16 @@
 extends Node
 
-signal card_drawn(card_data: CardData)
+signal card_drawn(card_data: CardBlueprint)
 signal deck_size_changed(amount: int)
 signal discards_size_changed(amount: int)
 
 # Mano inicial temporal
-@export var initial_hand: Array[CardData]
+@export var initial_hand: Array[CardBlueprint]
 
 # Baraja, mano y descartes o cartas usadas
-var deck: Array[CardData] = []
-var hand: Array[CardData] = []
-var discards: Array[CardData] = []
+var deck: Array[CardBlueprint] = []
+var hand: Array[CardBlueprint] = []
+var discards: Array[CardBlueprint] = []
 
 func _ready() -> void:
 	# Llamamos con deferred para esperar a que toda la escena este cargada y no se emitan señales antes de tiempo
@@ -55,7 +55,7 @@ func finish_turn() -> void:
 	
 
 # Funcion para usar las cartas y mandarlas a la pila de descartes
-func use_card(card_data: CardData):
+func use_card(card_data: CardBlueprint):
 	hand.erase(card_data)
 	discards.append(card_data)
 	# Señal para actualizar contadores de pilas

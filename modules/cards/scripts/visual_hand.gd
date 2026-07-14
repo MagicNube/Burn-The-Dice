@@ -9,7 +9,7 @@ func _ready() -> void:
 
 # Funcion para la señal card_drawn precarga una escena de tipo Card, 
 # la inicializa con los datos de la carta robada y la añade al arbol de la escena
-func on_card_drawn(card_data: CardData) -> void:
+func on_card_drawn(card_data: CardBlueprint) -> void:
 	var new_card = preload("res://modules/cards/scenes/card.tscn").instantiate()
 	new_card.setup(card_data)
 	add_child(new_card)
