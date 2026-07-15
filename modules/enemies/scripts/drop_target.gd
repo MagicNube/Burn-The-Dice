@@ -10,6 +10,6 @@ func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
 	return data is Card
 
 func _drop_data(at_position: Vector2, card: Variant) -> void:
-	var card_data = card.data
+	var data = card.card_data
 	card.queue_free()
-	CombatBus.card_consumed.emit(card_data)
+	CombatBus.card_consumed.emit(data)
