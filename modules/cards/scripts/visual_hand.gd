@@ -12,9 +12,9 @@ func _ready() -> void:
 	child_order_changed.connect(recalculate_fan)
 
 ## Funcion para la señal card_drawn precarga una escena de tipo Card, la inicializa con los datos de la carta robada y la añade al arbol de la escena
-func on_card_drawn(card_data: CardBlueprint) -> void:
+func on_card_drawn(card_instance: CardInstance) -> void:
 	var new_card = preload("res://modules/cards/scenes/card.tscn").instantiate()
-	new_card.setup(card_data)
+	new_card.setup(card_instance)
 	add_child(new_card)
 
 ## Funcion que calcula la inclinacion y posicion en y de las cartas de la mano para ponerlas en abanico

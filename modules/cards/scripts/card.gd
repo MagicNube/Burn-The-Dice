@@ -4,7 +4,7 @@ extends Control
 @export var visual_texture: TextureRect
 
 # Datos de la carta
-var card_data: CardBlueprint
+var card_instance: CardInstance
 # Variables de la posicion y rotacion en abanico
 var base_rotation: float = 0.0
 var base_position_y: float = 0.0
@@ -17,9 +17,9 @@ func _ready() -> void:
 	mouse_exited.connect(_on_mouse_exited)
 
 ## Inicializa la carta con sus datos y actualiza su aspecto visual.
-func setup(data: CardBlueprint) -> void:
-	card_data = data
-	visual_texture.texture = card_data.image 
+func setup(new_instance: CardInstance) -> void:
+	card_instance = new_instance
+	visual_texture.texture = card_instance.blueprint.image 
 
 ## Funcion para carta fantasma al agarrar una carta de la baraja
 ## Devuelve la referencia a Card
@@ -33,7 +33,7 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 	
 	# Creamos la textura fantasma y la configuramos igual que la original
 	var preview = TextureRect.new()
-	preview.texture = card_data.image
+	preview.texture = card_instance.blueprint.image
 	preview.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	preview.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT
 	preview.size = visual_texture.size 

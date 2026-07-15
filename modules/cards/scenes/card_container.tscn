@@ -5,12 +5,7 @@
 [ext_resource type="Script" uid="uid://e82klgj27n0y" path="res://modules/cards/data/blueprints/card_blueprint.gd" id="2_g2s5y"]
 [ext_resource type="Resource" uid="uid://dulki826s8xq1" path="res://modules/cards/data/fire/erupcion.tres" id="4_uh3ol"]
 [ext_resource type="Script" uid="uid://d1oag58vf36ij" path="res://modules/cards/scripts/visual_hand.gd" id="5_g2s5y"]
-[ext_resource type="Resource" uid="uid://cq5miy6vfjdev" path="res://modules/cards/data/fire/fenix.tres" id="5_kfgqj"]
-[ext_resource type="Resource" uid="uid://desb17cc2rera" path="res://modules/cards/data/fire/golpe_igneo.tres" id="6_s32ge"]
 [ext_resource type="PackedScene" uid="uid://c4dfmybyb2fqy" path="res://modules/cards/scenes/card_stack_ui.tscn" id="7_1lrnc"]
-[ext_resource type="Resource" uid="uid://bx1i2hdd1q56n" path="res://modules/cards/data/fire/incinerar.tres" id="7_8fyv6"]
-[ext_resource type="Resource" uid="uid://c0b38v0uaec3x" path="res://modules/cards/data/fire/la_forja.tres" id="8_sn8n0"]
-[ext_resource type="Resource" uid="uid://8lw7o5of0bb5" path="res://modules/cards/data/fire/mas_brasas.tres" id="9_ts3bu"]
 [ext_resource type="Resource" uid="uid://v4impo6r6a3x" path="res://modules/cards/data/water/choque_termico.tres" id="10_jca7h"]
 [ext_resource type="Resource" uid="uid://ceh2ot18keov3" path="res://modules/cards/data/water/condensacion.tres" id="11_3b813"]
 [ext_resource type="Resource" uid="uid://cv8s7yuxaqai6" path="res://modules/cards/data/water/corte_acuatico.tres" id="12_sa0i3"]
@@ -33,7 +28,7 @@ deck_logic = NodePath("DeckLogic")
 
 [node name="DeckLogic" type="Node" parent="." unique_id=654175964]
 script = ExtResource("1_6lq55")
-initial_hand = Array[ExtResource("2_g2s5y")]([ExtResource("4_uh3ol"), ExtResource("5_kfgqj"), ExtResource("6_s32ge"), ExtResource("7_8fyv6"), ExtResource("8_sn8n0"), ExtResource("9_ts3bu"), ExtResource("10_jca7h"), ExtResource("11_3b813"), ExtResource("12_sa0i3"), ExtResource("13_i73il"), ExtResource("14_o01ka"), ExtResource("15_fdm4e")])
+initial_deck = Array[ExtResource("2_g2s5y")]([ExtResource("4_uh3ol"), ExtResource("4_uh3ol"), ExtResource("10_jca7h"), ExtResource("11_3b813"), ExtResource("12_sa0i3"), ExtResource("13_i73il"), ExtResource("14_o01ka"), ExtResource("15_fdm4e")])
 
 [node name="VisualHand" type="HBoxContainer" parent="." unique_id=1754189885 node_paths=PackedStringArray("deck_logic")]
 layout_mode = 1
