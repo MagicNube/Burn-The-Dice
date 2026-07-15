@@ -25,6 +25,7 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 	
 	# Creamos el wrapper vacío para el centro del ratón
 	var preview_wrapper = Control.new()
+	preview_wrapper.set_script(preload("res://modules/cards/scripts/drag_preview.gd"))
 	
 	# Creamos la textura fantasma y la configuramos igual que la original
 	var preview = TextureRect.new()
