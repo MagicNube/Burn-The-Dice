@@ -3,6 +3,7 @@ extends HBoxContainer
 # Referencia a la logica de la baraja
 @export var deck_logic: Node
 
+# Angulo base que se añade a las cartas
 var base_angle: float = 5.0
 
 # Conectamos señales de creacion de cartas y poner las cartas en abanico
