@@ -2,10 +2,20 @@
 
 [ext_resource type="Script" uid="uid://t4gl1gkp7hc4" path="res://modules/cards/scripts/card.gd" id="2_7qf2j"]
 
-[node name="Card" type="TextureRect" unique_id=1512171938]
+[node name="CardWrapper" type="Control" unique_id=902671550 node_paths=PackedStringArray("visual_texture")]
 custom_minimum_size = Vector2(120, 180)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 119.0
+offset_bottom = 181.0
+script = ExtResource("2_7qf2j")
+visual_texture = NodePath("Card")
+
+[node name="Card" type="TextureRect" parent="." unique_id=1512171938]
+custom_minimum_size = Vector2(120, 180)
+layout_mode = 0
 offset_right = 120.0
 offset_bottom = 180.0
+pivot_offset = Vector2(60, 180)
 expand_mode = 1
 stretch_mode = 4
-script = ExtResource("2_7qf2j")
