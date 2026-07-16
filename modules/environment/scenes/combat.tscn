@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://bhiueuw4wrpar"]
+
+[ext_resource type="Texture2D" uid="uid://wes7ehowjpoq" path="res://modules/environment/artwork/backgrounds/throne_room.png" id="1_8kewh"]
+[ext_resource type="Script" uid="uid://7drw25rmnv23" path="res://modules/environment/scripts/combat_main.gd" id="1_dqiva"]
+[ext_resource type="PackedScene" uid="uid://bwv8aefa5ggwu" path="res://modules/dice/scenes/dice_zone_ui.tscn" id="2_opil0"]
+
+[node name="CombatMain" type="Control" unique_id=607137140]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dqiva")
+dice_scene = ExtResource("2_opil0")
+
+[node name="Background" type="TextureRect" parent="." unique_id=2053979646]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8kewh")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="PlayerSpot" type="Control" parent="." unique_id=167186216]
+layout_mode = 1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+pivot_offset = Vector2(250, 320)
+
+[node name="EnemySpot" type="Control" parent="." unique_id=1760509788]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+pivot_offset = Vector2(-250, 320)
+
+[node name="DiceZoneSpot" type="Control" parent="." unique_id=1156999654]
+z_index = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -300.0
+offset_right = 300.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CardsSpot" type="Control" parent="." unique_id=1885199137]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -400.0
+offset_top = -400.0
+offset_right = 400.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="UISpot" type="Control" parent="." unique_id=734564468]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 556.0
+offset_top = 608.0
+offset_right = 596.0
+offset_bottom = 648.0

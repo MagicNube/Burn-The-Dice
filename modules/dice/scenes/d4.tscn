@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://m5xhnm0i2xke" path="res://modules/dice/data/content/dice_content.gd" id="5_nj208"]
 [ext_resource type="Script" uid="uid://cjit44as410nm" path="res://modules/dice/ui/face_controller.gd" id="6_o2108"]
 [ext_resource type="FontFile" uid="uid://0qfdlewhbyjf" path="res://assets/fonts/Skranji-Bold.ttf" id="7_v322i"]
+[ext_resource type="Material" uid="uid://jurund44rr1f" path="res://modules/dice/assets/materials/dice_unlit.tres" id="9_mpx5d"]
 [ext_resource type="PackedScene" uid="uid://c84kct7q2aoa0" path="res://modules/dice/assets/models/d4_dice.glb" id="9_qwwsg"]
 
 [sub_resource type="Resource" id="Resource_180xf"]
@@ -21,6 +22,7 @@ metadata/_custom_type_script = "uid://m5xhnm0i2xke"
 points = PackedVector3Array(1.1945286, -0.35129023, 0.027947286, 1.1945286, -0.35129023, -0.027947286, -0.58409303, -0.3655, 0.8808883, -0.6010324, -0.32319742, -0.8978285, 0.01623565, 1.1075, 0.027947286, -0.5449651, -0.37952864, -0.8978285, -0.6010324, -0.32319742, 0.8978285, 0.01623565, 0.9951286, -0.08401763, -0.5449651, -0.32319742, 0.8978285, -0.5449651, -0.32319742, -0.8978285, -0.3764115, -0.37952864, 0.8136351, 0.12837031, 0.9951286, 0.027947286, -0.022122288, 1.0414108, -0.026462998, 1.1664071, -0.29525012, -0.027947286, 1.1664071, -0.29525012, 0.027947286, 0.01623565, 1.1075, -0.027947286, -0.3764115, -0.37952864, -0.8136351, -0.12402061, 0.68654394, 0.28052747, -0.5449651, -0.37952864, 0.8978285, -0.12402061, 0.68654394, -0.28052747, 0.12837031, 0.9951286, -0.027947286, -0.58409303, -0.3655, -0.8808883, 0.12837031, -0.32319742, -0.56105494, 0.12837031, -0.32319742, 0.56105494, 0.94196194, -0.014612764, -0.027947286, 0.94196194, -0.014612764, 0.027947286, -0.011885911, 1.0232215, 0.08401763, -0.022122288, 1.0414108, 0.026462998, -0.43265462, -0.04256004, -0.729266, -0.43265462, -0.04256004, 0.729266, -0.011885911, 1.0232215, -0.08401763)
 
 [node name="Dice" type="RigidBody3D" unique_id=1600995798 node_paths=PackedStringArray("mesh_instance", "sub_viewport", "face_controller")]
+freeze = true
 script = ExtResource("1_snvwt")
 mesh_instance = NodePath("d4_dice/1d4")
 sub_viewport = NodePath("SubViewport")
@@ -44,7 +46,12 @@ custom_font = ExtResource("7_v322i")
 
 [node name="d4_dice" parent="." unique_id=967859136 instance=ExtResource("9_qwwsg")]
 
+[node name="1d4" parent="d4_dice" index="0" unique_id=1448413712]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+material_override = ExtResource("9_mpx5d")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1084135666]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_snvwt")
 
 [editable path="d4_dice"]

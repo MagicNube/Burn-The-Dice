@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://di17eo5x6uaed"]
+
+[ext_resource type="Script" uid="uid://b8j5n1julaln8" path="res://modules/dice/scenes/ui_dice_3d.gd" id="1_bndv4"]
+[ext_resource type="PackedScene" uid="uid://cefsd1c1entn6" path="res://modules/dice/scenes/d4.tscn" id="2_gvcls"]
+[ext_resource type="PackedScene" uid="uid://nyvmsidi2div" path="res://modules/dice/scenes/d10.tscn" id="3_qo5je"]
+[ext_resource type="PackedScene" uid="uid://cgednorryult" path="res://modules/dice/scenes/d8.tscn" id="4_emgpp"]
+[ext_resource type="PackedScene" uid="uid://s6t0h36wwin3" path="res://modules/dice/scenes/d6.tscn" id="5_yvyxy"]
+[ext_resource type="Script" uid="uid://7r2hh0fc7858" path="res://modules/dice/scenes/dice_rotation.gd" id="6_qo5je"]
+
+[node name="SubViewportContainer" type="SubViewportContainer" unique_id=1041399387]
+custom_minimum_size = Vector2(100, 100)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+script = ExtResource("1_bndv4")
+visual_dice_scenes = Array[PackedScene]([ExtResource("2_gvcls"), ExtResource("3_qo5je"), ExtResource("4_emgpp"), ExtResource("5_yvyxy")])
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=2118064044]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport" unique_id=301867564]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 1.5, 2)
+rotation_order = 0
+keep_aspect = 0
+
+[node name="DicePivot" type="Node3D" parent="SubViewport" unique_id=1881407310]
+script = ExtResource("6_qo5je")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport" unique_id=2082405805]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 2.2919016, 4.024255)
+shadow_enabled = true
+
+[node name="ClickButton" type="Button" parent="." unique_id=1642722319]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+flat = true
