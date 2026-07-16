@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dghoxqodsq71k"
-path="res://.godot/imported/ReversoCarta.png-b2a78e75deabd30aab0a3995e351ff9f.ctex"
+uid="uid://jyilyhntjcln"
+path="res://.godot/imported/WaterCard.png-be1e3ee69b4d19b8dd614fd5914e1d68.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://modules/cards/assets/artwork/ReversoCarta.png"
-dest_files=["res://.godot/imported/ReversoCarta.png-b2a78e75deabd30aab0a3995e351ff9f.ctex"]
+source_file="res://modules/cards/assets/artwork/WaterCard.png"
+dest_files=["res://.godot/imported/WaterCard.png-be1e3ee69b4d19b8dd614fd5914e1d68.ctex"]
 
 [params]
 

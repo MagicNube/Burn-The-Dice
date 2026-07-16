@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dghoxqodsq71k"
-path="res://.godot/imported/ReversoCarta.png-b2a78e75deabd30aab0a3995e351ff9f.ctex"
+uid="uid://dnsg8or55wms0"
+path="res://.godot/imported/FireCard.png-35820198062f33f2ad4adcd269a1699e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://modules/cards/assets/artwork/ReversoCarta.png"
-dest_files=["res://.godot/imported/ReversoCarta.png-b2a78e75deabd30aab0a3995e351ff9f.ctex"]
+source_file="res://modules/cards/assets/artwork/FireCard.png"
+dest_files=["res://.godot/imported/FireCard.png-35820198062f33f2ad4adcd269a1699e.ctex"]
 
 [params]
 

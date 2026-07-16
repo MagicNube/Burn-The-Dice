@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CardBlueprint" format=3 uid="uid://ceh2ot18keov3"]
 
 [ext_resource type="Script" uid="uid://e82klgj27n0y" path="res://modules/cards/data/blueprints/card_blueprint.gd" id="1_13rkf"]
-[ext_resource type="Texture2D" uid="uid://bus1g6asmmbcm" path="res://modules/cards/assets/artwork/09.png" id="1_2434k"]
+[ext_resource type="Texture2D" uid="uid://c6vr7hhie2oup" path="res://modules/cards/assets/draws/condensacion.png" id="1_lmb4v"]
 
 [resource]
 script = ExtResource("1_13rkf")
@@ -9,6 +9,6 @@ name = "Condensación"
 element = 1
 elemental_cost = 3
 target = 3
-effect_description = "Añade un Dado Base de Agua a tu mano instantáneamente que desaparece al acabar el enfrentamiento. Además, aplica 1 de Mojado a todos los enemigos. Se consume la carta hasta que acabe el enfrentamiento."
-image = ExtResource("1_2434k")
+effect_description = "Añade un [color=#44ccff]Dado de Agua[/color] temporal a tu mano y aplica 1 [color=#44ccff]Mojado[/color] a todos los enemigos. [color=#b0b0b0]Consumir[/color]."
+image = ExtResource("1_lmb4v")
 metadata/_custom_type_script = "uid://e82klgj27n0y"

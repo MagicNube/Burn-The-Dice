@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CardBlueprint" format=3 uid="uid://v4impo6r6a3x"]
 
 [ext_resource type="Script" uid="uid://e82klgj27n0y" path="res://modules/cards/data/blueprints/card_blueprint.gd" id="1_50dal"]
-[ext_resource type="Texture2D" uid="uid://cuqcnwmcmdk5a" path="res://modules/cards/assets/artwork/07.png" id="1_80cg3"]
+[ext_resource type="Texture2D" uid="uid://bxs5osi0tlpob" path="res://modules/cards/assets/draws/coque_termico.png" id="1_h2qnm"]
 
 [resource]
 script = ExtResource("1_50dal")
@@ -9,7 +9,7 @@ name = "Choque Térmico"
 element = 1
 elemental_cost = 4
 neutral_cost = 1
-effect_description = "Inflige 6 de daño. Si el enemigo está Quemado, consume las cargas y ganas +2 de Energía Neutral por cada carga de Quemado consumida."
+effect_description = "Inflige 6 de daño. Si el objetivo está [color=#ff6644]Quemado[/color], consume las cargas para ganar +2 de Energía por cada una."
 base_damage = 6
-image = ExtResource("1_80cg3")
+image = ExtResource("1_h2qnm")
 metadata/_custom_type_script = "uid://e82klgj27n0y"

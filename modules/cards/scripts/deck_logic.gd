@@ -21,7 +21,6 @@ func _ready() -> void:
 func init_combat() -> void:
 	for blueprint: CardBlueprint in initial_deck:
 		var new_card_instance: CardInstance = CardInstance.new(blueprint)
-		print(new_card_instance.id)
 		deck_stack.append(new_card_instance)
 	
 	# Señal para actualizar contadores de pilas
@@ -52,7 +51,6 @@ func finish_turn() -> void:
 		hand.push_front(drawn_card)
 		# Señal para enviar informacion de la carta robada a la interfaz
 		card_drawn.emit(drawn_card)
-		print("Señal carta ", i)
 	
 
 # Funcion para usar las cartas y mandarlas a la pila de descartes

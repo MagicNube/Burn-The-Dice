@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CardBlueprint" format=3 uid="uid://dfu0lupbdfku6"]
 
 [ext_resource type="Script" uid="uid://e82klgj27n0y" path="res://modules/cards/data/blueprints/card_blueprint.gd" id="1_oucxd"]
-[ext_resource type="Texture2D" uid="uid://yncjm6v67247" path="res://modules/cards/assets/artwork/10.png" id="1_qohy6"]
+[ext_resource type="Texture2D" uid="uid://h6rq65fyilu6" path="res://modules/cards/assets/draws/marea_alta.png" id="1_yvuhh"]
 
 [resource]
 script = ExtResource("1_oucxd")
@@ -10,7 +10,7 @@ element = 1
 elemental_cost = 4
 neutral_cost = 2
 target = 1
-effect_description = "Inflige 4 de daño a todos los enemigos. Si has quemado algún dado este turno, aplica 2 cargas de Mojado y Vulnerabilidad durante 2 turnos a todos los enemigos. "
+effect_description = "Inflige 4 de daño global. Si [color=#ff6644]quemas[/color] un dado este turno, aplica 2 [color=#44ccff]Mojado[/color] y [color=#ffdd55]Vulnerabilidad[/color] (2 turnos) global."
 base_damage = 4
-image = ExtResource("1_qohy6")
+image = ExtResource("1_yvuhh")
 metadata/_custom_type_script = "uid://e82klgj27n0y"

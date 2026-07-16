@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="CardBlueprint" format=3 uid="uid://bx1i2hdd1q56n"]
 
 [ext_resource type="Script" uid="uid://e82klgj27n0y" path="res://modules/cards/data/blueprints/card_blueprint.gd" id="1_7byor"]
-[ext_resource type="Texture2D" uid="uid://huitv24ffcxe" path="res://modules/cards/assets/artwork/00.png" id="1_y7tyg"]
+[ext_resource type="Texture2D" uid="uid://bglr211r1pduy" path="res://modules/cards/assets/draws/incinerar.jpg" id="1_y7tyg"]
 
 [resource]
 script = ExtResource("1_7byor")
 name = "Incinerar"
 elemental_cost = 2
 neutral_cost = 1
-effect_description = "Inflige 5 de daño. Si has quemado algún dado este turno, inflige 3 de daño adicional."
+effect_description = "Inflige 5 de daño. Si [color=#ff6644]quemas[/color] un dado este turno, hace +3 de daño."
 base_damage = 5
 image = ExtResource("1_y7tyg")
 metadata/_custom_type_script = "uid://e82klgj27n0y"

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="CardBlueprint" format=3 uid="uid://cv8s7yuxaqai6"]
 
-[ext_resource type="Texture2D" uid="uid://dsy6e3w3n64pb" path="res://modules/cards/assets/artwork/11.png" id="1_btpou"]
+[ext_resource type="Texture2D" uid="uid://ec6tjhcvv321" path="res://modules/cards/assets/draws/corte_acuatico.png" id="1_53b1t"]
 [ext_resource type="Script" uid="uid://e82klgj27n0y" path="res://modules/cards/data/blueprints/card_blueprint.gd" id="1_m5s7s"]
 
 [resource]
@@ -8,7 +8,7 @@ script = ExtResource("1_m5s7s")
 name = "Corte Acuatico"
 element = 1
 elemental_cost = 2
-effect_description = "Inflige 2 de daño por golpe. Dos golpes. Si tienes un dado en el Slot para Quemar, lo devuelve a la bolsa y pega otros dos golpes."
+effect_description = "Inflige 2 de daño x2. Si hay un dado en el slot de [color=#ff6644]Quemar[/color], devuélvelo a la bolsa para golpear otras 2 veces."
 base_damage = 2
-image = ExtResource("1_btpou")
+image = ExtResource("1_53b1t")
 metadata/_custom_type_script = "uid://e82klgj27n0y"

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="CardBlueprint" format=3 uid="uid://pbd2yxtks8xo"]
 
-[ext_resource type="Texture2D" uid="uid://dqpcl63oy40ci" path="res://modules/cards/assets/artwork/08.png" id="1_6oxhl"]
+[ext_resource type="Texture2D" uid="uid://dif1cnsmxhfkq" path="res://modules/cards/assets/draws/presion_abisal.png" id="1_bo7bl"]
 [ext_resource type="Script" uid="uid://e82klgj27n0y" path="res://modules/cards/data/blueprints/card_blueprint.gd" id="1_qninq"]
 
 [resource]
@@ -10,7 +10,7 @@ element = 1
 elemental_cost = 7
 neutral_cost = 1
 rarity = 3
-effect_description = "Inflige 10 de daño. Si el enemigo está Mojado, consume las cargas y hace +4 de daño y te cura 2 de vida por cada carga de Mojado consumida."
+effect_description = "Inflige 10 de daño. Si el objetivo está [color=#44ccff]Mojado[/color], consume las cargas para hacer +4 de daño y curar 2 de vida por cada una."
 base_damage = 10
-image = ExtResource("1_6oxhl")
+image = ExtResource("1_bo7bl")
 metadata/_custom_type_script = "uid://e82klgj27n0y"

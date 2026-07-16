@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="CardBlueprint" format=3 uid="uid://8lw7o5of0bb5"]
 
-[ext_resource type="Texture2D" uid="uid://dw0glyw7ug2cv" path="res://modules/cards/assets/artwork/01.png" id="1_pf8jn"]
+[ext_resource type="Texture2D" uid="uid://dmsilhnyj05n5" path="res://modules/cards/assets/draws/mas_brasas.jpg" id="1_pf8jn"]
 [ext_resource type="Script" uid="uid://e82klgj27n0y" path="res://modules/cards/data/blueprints/card_blueprint.gd" id="1_wlhju"]
 
 [resource]
 script = ExtResource("1_wlhju")
 name = "Más Brasas"
-effect_description = "Si has quemado algún dado este turno, aplica 3 cargas de Quemado. "
+effect_description = "Si [color=#ff6644]quemas[/color] un dado este turno, aplica 3 [color=#ff6644]Quemado[/color]."
 image = ExtResource("1_pf8jn")
 metadata/_custom_type_script = "uid://e82klgj27n0y"
